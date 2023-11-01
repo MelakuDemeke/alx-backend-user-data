@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """module to filter logs"""
 from typing import List
+import re
 
 
 patterns = {
