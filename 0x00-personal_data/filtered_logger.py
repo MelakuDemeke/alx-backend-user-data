@@ -10,9 +10,8 @@ patterns = {
 }
 
 
-def filter_datum(
-    fields: List[str], rdaction: str,
-    message: str, separator: str) -> str:
+def filter_datum(fields: List[str], rdaction: str, message: str, separator: str
+                 ) -> str:
     """
     Replaces all occurrences of certain fields in a message with a given
     redaction string.
