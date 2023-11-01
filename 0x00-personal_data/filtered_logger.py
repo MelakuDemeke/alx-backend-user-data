@@ -9,7 +9,12 @@ patterns = {
     'replace': lambda x: r'\g<field>={}'.format(x),
 }
 
+import re
+from typing import List
+
 def filter_datum(
     fields: List[str], rdaction: str,
-    message: str, separator: str):
-    pass
+    message: str, separator: str) -> str:
+
+    extract, replace = (patterns["extract"], patterns["replace"])
+    return re.sub(extract(fields, separator), replace(redaction), message)
