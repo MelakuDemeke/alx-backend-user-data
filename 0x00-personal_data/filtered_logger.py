@@ -3,8 +3,6 @@
 from typing import List
 
 def filter_datum(
-    fields: List[str],
-    rdaction: str,
-    message: str,
-    separator: str):
+    fields: List[str], rdaction: str,
+    message: str, separator: str):
     pass
