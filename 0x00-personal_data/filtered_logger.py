@@ -9,8 +9,6 @@ patterns = {
     'replace': lambda x: r'\g<field>={}'.format(x),
 }
 
-import re
-from typing import List
 
 def filter_datum(
     fields: List[str], rdaction: str,
