@@ -4,6 +4,7 @@ from typing import List
 import re
 import logging
 import mysql.connector
+import os
 
 PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 patterns = {
