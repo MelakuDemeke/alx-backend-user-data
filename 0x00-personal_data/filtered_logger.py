@@ -4,7 +4,7 @@ from typing import List
 import re
 import logging
 
-
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 patterns = {
     'extract': lambda x, y: r'(?P<field>{})=[^{}]*'.format('|'.join(x), y),
     'replace': lambda x: r'\g<field>={}'.format(x),
