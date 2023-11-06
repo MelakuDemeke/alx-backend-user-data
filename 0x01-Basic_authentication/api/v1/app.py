@@ -50,6 +50,8 @@ def authenticate_user():
             '/api/v1/unauthorized/',
             '/api/v1/forbidden/'
         ]
+        if auth.require_auth(request.path, excluded_paths):
+            pass
 
 
 if __name__ == "__main__":
