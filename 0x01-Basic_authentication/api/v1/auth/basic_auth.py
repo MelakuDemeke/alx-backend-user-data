@@ -3,6 +3,9 @@
 """
 from .auth import Auth
 import re
+from typing import Tuple, TypeVar
+import base64
+import binascii
 
 
 class BasicAuth(Auth):
@@ -27,4 +30,11 @@ class BasicAuth(Auth):
         """decode base 64 auth header
         """
         if type(base64_authorization_header) == str:
-            pass
+            try:
+                res = base64.b64decode(
+                    base64_authorization_header,
+                    validate=True
+                )
+                return res.decode('utf-8')
+            except (binascii.Error, UnicodeDecodeError):
+                return None
