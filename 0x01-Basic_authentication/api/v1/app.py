@@ -8,6 +8,7 @@ from flask import Flask, jsonify, abort, request
 from flask_cors import (CORS, cross_origin)
 import os
 
+from api.v1.auth.auth import Auth
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
@@ -36,6 +37,11 @@ def forbidden(error) -> str:
     """ forbidden handler
     """
     return jsonify({"error": "Forbidden"}), 403
+
+
+@app.before_request
+def authenticate_user():
+    pass
 
 
 if __name__ == "__main__":
