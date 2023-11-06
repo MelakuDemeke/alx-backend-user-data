@@ -33,4 +33,7 @@ class Auth:
         return Non
 
     def current_user(self, request=None) -> TypeVar('User'):
+        """
+        Returns the currently authenticated user based on the provided request
+        """
         pass
