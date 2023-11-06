@@ -2,7 +2,7 @@
 """Authentication module for v1 API.
 """
 from flask import request
-
+from typing import List, TypeVar
 
 class Auth:
     """ Auth class
