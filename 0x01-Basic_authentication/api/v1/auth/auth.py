@@ -36,4 +36,4 @@ class Auth:
         """
         Returns the currently authenticated user based on the provided request
         """
-        pass
+        return None
