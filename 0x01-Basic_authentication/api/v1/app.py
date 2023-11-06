@@ -41,6 +41,8 @@ def forbidden(error) -> str:
 
 @app.before_request
 def authenticate_user():
+    """authenticate the user before accessing any protected resource
+    """
     pass
 
 
