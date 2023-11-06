@@ -32,4 +32,4 @@ def unauthorized() -> None:
     Return:
       - unauthorized error
     """
-  pass
+  abort(401)
