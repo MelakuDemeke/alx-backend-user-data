@@ -44,7 +44,8 @@ def forbidden(error) -> str:
 def authenticate_user():
     """authenticate the user before accessing any protected resource
     """
-    pass
+    if auth:
+        pass
 
 
 if __name__ == "__main__":
