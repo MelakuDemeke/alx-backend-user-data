@@ -43,4 +43,10 @@ class BasicAuth(Auth):
         """Extract user credentials from decoded base64 auth header
         """
         if type(decoded_base64_authorization_header) == str:
-            pass
+            pattern = r'(?P<user>[^:]+):(?P<password>.+)'
+            field_match = re.fullmatch(
+                pattern,
+                decoded_base64_authorization_header.strip(),
+            )
+            if field_match is not None:
+                pass
