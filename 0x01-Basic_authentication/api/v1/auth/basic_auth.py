@@ -13,4 +13,8 @@ class BasicAuth(Auth):
         """Extrac the Base64 part of auth header
         """
         if type(authorization_header) == str:
-            pass
+            pattern = r'Basic (?P<token>.+)'
+            field_match = re.fullmatch(pattern, authorization_header.strip())
+            if field_match is not None:
+                return field_match.group('token')
+        return None
