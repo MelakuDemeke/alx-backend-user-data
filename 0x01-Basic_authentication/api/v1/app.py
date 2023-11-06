@@ -45,7 +45,11 @@ def authenticate_user():
     """authenticate the user before accessing any protected resource
     """
     if auth:
-        pass
+        excluded_paths = [
+            '/api/v1/status/',
+            '/api/v1/unauthorized/',
+            '/api/v1/forbidden/'
+        ]
 
 
 if __name__ == "__main__":
