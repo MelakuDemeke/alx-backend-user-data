@@ -12,4 +12,5 @@ class BasicAuth(Auth):
             authorization_header: str) -> str:
         """Extrac the Base64 part of auth header
         """
-        pass
+        if type(authorization_header) == str:
+            pass
