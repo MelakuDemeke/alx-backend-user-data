@@ -42,4 +42,5 @@ class BasicAuth(Auth):
             self, decoded_base64_authorization_header: str) -> Tuple(str, str):
         """Extract user credentials from decoded base64 auth header
         """
-        pass
+        if type(decoded_base64_authorization_header) == str:
+            pass
