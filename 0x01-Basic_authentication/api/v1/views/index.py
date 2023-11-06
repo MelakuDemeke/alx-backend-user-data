@@ -41,4 +41,4 @@ def forbidden() -> None:
     Return:
       - forbidden error
     """
-  pass
+  abort(403)
