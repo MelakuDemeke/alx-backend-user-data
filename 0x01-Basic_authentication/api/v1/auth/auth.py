@@ -3,6 +3,7 @@
 """
 from flask import request
 
+
 class Auth:
     """ Auth class
     """
