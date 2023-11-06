@@ -26,4 +26,5 @@ class BasicAuth(Auth):
             base64_authorization_header: str) -> str:
         """decode base 64 auth header
         """
-        pass
+        if type(base64_authorization_header) == str:
+            pass
