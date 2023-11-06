@@ -2,6 +2,7 @@
 """Basic Authentication module for v1 API.
 """
 from .auth import Auth
+import re
 
 
 class BasicAuth(Auth):
