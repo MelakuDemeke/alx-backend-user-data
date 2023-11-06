@@ -23,7 +23,6 @@ class BasicAuth(Auth):
                 return field_match.group('token')
         return None
 
-
     def decode_base64_authorization_header(
             self,
             base64_authorization_header: str) -> str:
@@ -38,3 +37,9 @@ class BasicAuth(Auth):
                 return res.decode('utf-8')
             except (binascii.Error, UnicodeDecodeError):
                 return None
+
+    def extract_user_credentials(
+            self, decoded_base64_authorization_header: str) -> Tuple(str, str):
+        """Extract user credentials from decoded base64 auth header
+        """
+        pass
