@@ -26,6 +26,8 @@ class Auth:
         return True
 
     def authorization_header(self, request=None) -> str:
+        """Returns the value of the Authorization header in the given request
+        """
         pass
 
     def current_user(self, request=None) -> TypeVar('User'):
