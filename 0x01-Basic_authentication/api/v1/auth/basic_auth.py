@@ -58,4 +58,5 @@ class BasicAuth(Auth):
             self, user_email: str, user_pwd: str) -> TypeVar('User'):
         """get a user based on user auth credential
         """
-        pass
+        if type(user_email) == str and type(user_pwd) == str:
+            pass
