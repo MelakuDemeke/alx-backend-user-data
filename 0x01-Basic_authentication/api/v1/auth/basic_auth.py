@@ -6,6 +6,7 @@ import re
 from typing import Tuple, TypeVar
 import base64
 import binascii
+from models.user import User
 
 
 class BasicAuth(Auth):
@@ -59,4 +60,12 @@ class BasicAuth(Auth):
         """get a user based on user auth credential
         """
         if type(user_email) == str and type(user_pwd) == str:
-            pass
+            try:
+                users = User.search({'email': user_email})
+            except Exception:
+                return None
+            if len(users) <= 0:
+                return None
+            if users[0].is_valid_password(user_pwd):
+                return users[0]
+        return None
