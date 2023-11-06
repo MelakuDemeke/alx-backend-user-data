@@ -51,7 +51,12 @@ def authenticate_user():
             '/api/v1/forbidden/'
         ]
         if auth.require_auth(request.path, excluded_paths):
-            pass
+            auth_header = auth.authorization_header(request)
+            user = auth.current_user(request)
+            if auth_header is None:
+                abort(401)
+            if user is None:
+                abort(403)
 
 
 if __name__ == "__main__":
