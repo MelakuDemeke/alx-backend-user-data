@@ -19,3 +19,19 @@ class SessionDBAuth(SessionExpAuth):
             user_session = UserSession(**kwargs)
             user_session.save()
             return session_id
+
+    def user_id_for_session_id(self, session_id=None):
+        """get user id from the session id
+        """
+        try:
+            sessions = UserSession.search({'session_id': session_id})
+        except Exception:
+            return None
+        if len(sessions) <= 0:
+            return None
+        cur_time = datetime.now()
+        time_span = timedelta(seconds=self.session_duration)
+        exp_time = sessions[0].created_at + time_span
+        if exp_time < cur_time:
+            return None
+        return sessions[0].user_id
