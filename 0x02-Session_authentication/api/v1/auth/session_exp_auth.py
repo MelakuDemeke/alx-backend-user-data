@@ -6,6 +6,7 @@ from .session_auth import SessionAuth
 from flask import request
 from datetime import datetime, timedelta
 
+
 class SessionExpAuth(SessionAuth):
     """Inherits from SessionAuth and addssession expiration functionality.
     """
