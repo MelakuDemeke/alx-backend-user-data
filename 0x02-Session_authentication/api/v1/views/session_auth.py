@@ -38,7 +38,13 @@ def login() -> Tuple[str, int]:
 @app_views.route(
     '/auth_session/logout', methods=['DELETE'], strict_slashes=False)
 def logout() -> Tuple[str, int]:
-    
+    """
+    Logs out the current user by destroying their session.
+
+    Returns:
+        A tuple containing an empty JSON response and a status code of 200.
+        If the session could not be destroyed, returns a 404 error.
+    """
     from api.v1.app import auth
     is_destroyed = auth.destroy_session(request)
     if not is_destroyed:
