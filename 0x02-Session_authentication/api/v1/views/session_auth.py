@@ -11,4 +11,8 @@ def login() -> Tuple[str, int]:
         Tuple containing a JSON representation of a User object and an
         HTTP status code.
     """
-    pass
+    not_found_res = {"error": "no user found for this email"}
+    email = request.form.get('email')
+    password = request.form.get('password')
+    
+    
