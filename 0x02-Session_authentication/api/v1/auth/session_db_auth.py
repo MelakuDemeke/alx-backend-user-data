@@ -2,6 +2,10 @@
 """session db auth module
 """
 from .session_exp_auth import SessionExpAuth
+from models.user_session import UserSession
+
+from flask import request
+from datetime import datetime, timedelta
 
 
 class SessionDBAuth(SessionExpAuth):
