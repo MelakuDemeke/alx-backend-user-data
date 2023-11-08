@@ -34,3 +34,8 @@ def login() -> Tuple[str, int]:
         res.set_cookie(os.getenv("SESSION_NAME"), sessiond_id)
         return res
     return jsonify({"error": "wrong password"}), 401
+
+def destroy_session(self, request=None):
+        """Destroys an auth session.
+        """
+        pass
