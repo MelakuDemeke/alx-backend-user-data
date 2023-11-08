@@ -38,3 +38,6 @@ class Auth:
         Returns the currently authenticated user based on the provided request
         """
         return None
+
+    def session_cookie(self, request=None) -> str:
+        pass
