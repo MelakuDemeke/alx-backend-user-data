@@ -4,6 +4,7 @@
 from flask import request
 
 from .auth import Auth
+from uuid import uuid4
 
 class SessionAuth(Auth):
     """define Session auth class
