@@ -22,5 +22,6 @@ class SessionAuth(Auth):
     def user_id_for_session_id(self, session_id: str = None) -> str:
         """Returns the user ID associated with a session ID.
         """
-        pass
+        if type(session_id) is str:
+            return self.user_id_by_session_id.get(session_id)
 
