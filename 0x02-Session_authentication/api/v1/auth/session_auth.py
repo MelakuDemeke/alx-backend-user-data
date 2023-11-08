@@ -20,4 +20,7 @@ class SessionAuth(Auth):
             return session_id
 
     def user_id_for_session_id(self, session_id: str = None) -> str:
+        """Returns the user ID associated with a session ID.
+        """
         pass
+
