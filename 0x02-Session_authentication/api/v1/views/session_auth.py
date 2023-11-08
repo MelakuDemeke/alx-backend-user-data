@@ -38,4 +38,9 @@ def login() -> Tuple[str, int]:
 @app_views.route(
     '/auth_session/logout', methods=['DELETE'], strict_slashes=False)
 def logout() -> Tuple[str, int]:
-    pass
+    
+    from api.v1.app import auth
+    is_destroyed = auth.destroy_session(request)
+    if not is_destroyed:
+        abort(404)
+    return jsonify({})
