@@ -7,6 +7,7 @@ from flask import abort, jsonify, request
 import os
 from api.v1.views import app_views
 
+
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
 def login() -> Tuple[str, int]:
     """Log in a user using session authentication.
@@ -34,6 +35,7 @@ def login() -> Tuple[str, int]:
         res.set_cookie(os.getenv("SESSION_NAME"), sessiond_id)
         return res
     return jsonify({"error": "wrong password"}), 401
+
 
 @app_views.route(
     '/auth_session/logout', methods=['DELETE'], strict_slashes=False)
