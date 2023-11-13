@@ -45,4 +45,7 @@ class DB:
     def find_user_by(self, **kwargs) -> User:
         """Finds a user in the database based on the provided keyword arguments
         """
-        pass
+        filter_fields = []
+        filter_values = []
+        for filter_key, filter_value in kwargs.items():
+            pass
