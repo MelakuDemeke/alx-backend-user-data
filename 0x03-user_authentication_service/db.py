@@ -49,5 +49,6 @@ class DB:
         filter_values = []
         for filter_key, filter_value in kwargs.items():
             if hasattr(User, filter_key):
-                pass
+                filter_fields.append(getattr(User, filter_key))
+                filter_values.append(filter_value)
 
