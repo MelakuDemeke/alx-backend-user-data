@@ -62,4 +62,6 @@ class DB:
         return query_result
 
     def update_user(self, user_id: int, **kwargs) -> None:
+        """Updates a user in the database based on the provided user_id
+        """
         pass
