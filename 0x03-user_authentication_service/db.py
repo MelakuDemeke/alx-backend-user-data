@@ -53,3 +53,6 @@ class DB:
                 filter_values.append(filter_value)
             else:
                 raise InvalidRequestError()
+        query_result = self._session.query(User).filter(
+            tuple_(*filter_fields).in_([tuple(filter_values)])
+        ).first()
