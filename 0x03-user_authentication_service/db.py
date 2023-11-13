@@ -65,6 +65,13 @@ class DB:
         """Updates a user in the database based on the provided user_id
         """
         user_to_update = self.find_user_by(id=user_id)
+
         if user_to_update is None:
             return
-        
+
+        update_data = {}
+        for field, value in kwargs.items():
+            if hasattr(User, field):
+                update_data[getattr(User, field)] = value
+            else:
+                raise ValueError()
