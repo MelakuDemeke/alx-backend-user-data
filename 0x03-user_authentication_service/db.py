@@ -43,4 +43,6 @@ class DB:
         return user_to_add
 
     def find_user_by(self, **kwargs) -> User:
+        """Finds a user in the database based on the provided keyword arguments
+        """
         pass
