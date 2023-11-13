@@ -48,4 +48,6 @@ class DB:
         filter_fields = []
         filter_values = []
         for filter_key, filter_value in kwargs.items():
-            pass
+            if hasattr(User, filter_key):
+                pass
+
