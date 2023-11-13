@@ -75,3 +75,8 @@ class DB:
                 update_data[getattr(User, field)] = value
             else:
                 raise ValueError()
+        self._session.query(User).filter(User.id == user_id).update(
+            update_data,
+            synchronize_session=False,
+        )
+        self._session.commit()
