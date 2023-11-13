@@ -60,3 +60,6 @@ class DB:
         if query_result is None:
             raise NoResultFound()
         return query_result
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        pass
