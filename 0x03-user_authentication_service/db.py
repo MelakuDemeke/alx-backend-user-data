@@ -58,4 +58,5 @@ class DB:
         ).first()
 
         if query_result is None:
-            pass
+            raise NoResultFound()
+        return query_result
