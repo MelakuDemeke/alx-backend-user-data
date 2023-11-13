@@ -8,4 +8,4 @@ Base = declarative_base()
 class User(Base):
     """Representation of a user instance in the database
     """
-    pass
+    __tablename__ = "users"
