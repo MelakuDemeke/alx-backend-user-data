@@ -40,3 +40,4 @@ class DB:
         except Exception:
             self._session.rollback()
             user_to_add = None
+        return user_to_add
