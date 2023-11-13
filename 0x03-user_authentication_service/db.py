@@ -41,3 +41,6 @@ class DB:
             self._session.rollback()
             user_to_add = None
         return user_to_add
+
+    def find_user_by(self, **kwargs) -> User:
+        pass
