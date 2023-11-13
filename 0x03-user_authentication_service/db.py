@@ -51,4 +51,5 @@ class DB:
             if hasattr(User, filter_key):
                 filter_fields.append(getattr(User, filter_key))
                 filter_values.append(filter_value)
-
+            else:
+                raise InvalidRequestError()
