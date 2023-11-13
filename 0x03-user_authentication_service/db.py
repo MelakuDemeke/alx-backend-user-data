@@ -56,3 +56,6 @@ class DB:
         query_result = self._session.query(User).filter(
             tuple_(*filter_fields).in_([tuple(filter_values)])
         ).first()
+
+        if query_result is None:
+            pass
