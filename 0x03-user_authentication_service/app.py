@@ -20,6 +20,10 @@ def index() -> str:
 
 @app.route("/users", methods=["POST"], strict_slashes=False)
 def users() -> str:
+    """POST /users
+    Return:
+        - new user's payload as a JSON object
+    """
     pass
 
 
