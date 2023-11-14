@@ -33,6 +33,10 @@ def users() -> str:
 
 @app.route("/sessions", methods=["POST"], strict_slashes=False)
 def login() -> str:
+    """POST /sessions
+    Return:
+        - new session ID as a JSON object
+    """
     pass
 
 
