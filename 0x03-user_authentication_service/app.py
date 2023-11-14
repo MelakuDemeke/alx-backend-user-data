@@ -24,7 +24,7 @@ def users() -> str:
     Return:
         - new user's payload as a JSON object
     """
-    pass
+    email, password = request.form.get("email"), request.form.get("password")
 
 
 if __name__ == "__main__":
