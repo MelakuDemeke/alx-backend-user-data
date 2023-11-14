@@ -79,4 +79,6 @@ class Auth:
         return user
 
     def destroy_session(self, user_id: int) -> None:
+        """Destroys a user session.
+        """
         pass
