@@ -96,7 +96,10 @@ def update_password() -> str:
     Return:
         - update password
     """
-    pass
+    email = request.form.get("email")
+    reset_token = request.form.get("reset_token")
+    new_password = request.form.get("new_password")
+    is_pwd_changed = False
 
 
 if __name__ == "__main__":
