@@ -62,6 +62,10 @@ def logout() -> str:
 
 @app.route("/profile", methods=["GET"], strict_slashes=False)
 def profile() -> str:
+    """GET /profile
+    Return:
+        - profile payload
+    """
     pass
 
 
