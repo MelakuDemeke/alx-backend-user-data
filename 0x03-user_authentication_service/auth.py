@@ -100,4 +100,6 @@ class Auth:
         return reset_token
 
     def update_password(self, reset_token: str, password: str) -> None:
+        """Updates a user password.
+        """
         pass
