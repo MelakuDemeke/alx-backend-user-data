@@ -100,6 +100,14 @@ def update_password() -> str:
     reset_token = request.form.get("reset_token")
     new_password = request.form.get("new_password")
     is_pwd_changed = False
+    try:
+        AUTH.update_password(reset_token, new_password)
+        is_pwd_changed = True
+    except ValueError:
+        is_pwd_changed = False
+    if not is_pwd_changed:
+        abort(403)
+    return jsonify({"email": email, "message": "Password updated"})
 
 
 if __name__ == "__main__":
