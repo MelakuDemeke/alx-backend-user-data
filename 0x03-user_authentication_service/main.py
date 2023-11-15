@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Integration test module
 """
+import requests
 
 
 EMAIL = "guillaume@holberton.io"
