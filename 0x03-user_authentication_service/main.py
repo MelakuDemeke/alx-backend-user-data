@@ -20,6 +20,15 @@ def log_in(email: str, password: str) -> str:
     pass
 
 
+def profile_unlogged() -> None:
+    pass
+
+
+def profile_logged(session_id: str) -> None:
+    pass
+
+
+
 if __name__ == "__main__":
 
     register_user(EMAIL, PASSWD)
