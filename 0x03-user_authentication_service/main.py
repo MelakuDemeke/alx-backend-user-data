@@ -32,6 +32,13 @@ def log_out(session_id: str) -> None:
     pass
 
 
+def reset_password_token(email: str) -> str:
+    pass
+
+
+
+
+
 if __name__ == "__main__":
 
     register_user(EMAIL, PASSWD)
