@@ -83,7 +83,16 @@ def log_out(session_id: str) -> None:
 
 
 def reset_password_token(email: str) -> str:
-    pass
+    """Test reset password token
+    """
+    url = "{}/reset_password".format(BASE_URL)
+    body = {'email': email}
+    res = requests.post(url, data=body)
+    assert res.status_code == 200
+    assert "email" in res.json()
+    assert res.json()["email"] == email
+    assert "reset_token" in res.json()
+    return res.json().get('reset_token')
 
 
 def update_password(email: str, reset_token: str, new_password: str) -> None:
