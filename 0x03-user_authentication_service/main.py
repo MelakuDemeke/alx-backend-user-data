@@ -51,7 +51,11 @@ def log_in(email: str, password: str) -> str:
 
 
 def profile_unlogged() -> None:
-    pass
+    """Test profile unlogged
+    """
+    url = "{}/profile".format(BASE_URL)
+    res = requests.get(url)
+    assert res.status_code == 403
 
 
 def profile_logged(session_id: str) -> None:
