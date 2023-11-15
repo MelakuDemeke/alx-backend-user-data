@@ -3,10 +3,13 @@
 """
 import requests
 
-
 EMAIL = "guillaume@holberton.io"
 PASSWD = "b4l0u"
 NEW_PASSWD = "t4rt1fl3tt3"
+
+
+def register_user(email: str, password: str) -> None:
+    pass
 
 
 if __name__ == "__main__":
