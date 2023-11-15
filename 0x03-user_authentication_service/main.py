@@ -12,6 +12,10 @@ def register_user(email: str, password: str) -> None:
     pass
 
 
+def log_in_wrong_password(email: str, password: str) -> None:
+    pass
+
+
 if __name__ == "__main__":
 
     register_user(EMAIL, PASSWD)
