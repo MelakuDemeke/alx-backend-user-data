@@ -59,7 +59,15 @@ def profile_unlogged() -> None:
 
 
 def profile_logged(session_id: str) -> None:
-    pass
+    """Test profile logged
+    """
+    url = "{}/profile".format(BASE_URL)
+    req_cookies = {
+        'session_id': session_id,
+    }
+    res = requests.get(url, cookies=req_cookies)
+    assert res.status_code == 200
+    assert "email" in res.json()
 
 
 def log_out(session_id: str) -> None:
