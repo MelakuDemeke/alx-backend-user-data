@@ -28,6 +28,9 @@ def profile_logged(session_id: str) -> None:
     pass
 
 
+def log_out(session_id: str) -> None:
+    pass
+
 
 if __name__ == "__main__":
 
