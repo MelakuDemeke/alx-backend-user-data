@@ -36,7 +36,8 @@ def reset_password_token(email: str) -> str:
     pass
 
 
-
+def update_password(email: str, reset_token: str, new_password: str) -> None:
+    pass
 
 
 if __name__ == "__main__":
